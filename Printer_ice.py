@@ -39,6 +39,30 @@ if 'PrinterPrx' not in _M_Demo.__dict__:
         def end_printString(self, _r):
             return _M_Demo.Printer._op_printString.end(self, _r)
 
+        def printUpperCase(self, s, context=None):
+            return _M_Demo.Printer._op_printUpperCase.invoke(self, ((s, ), context))
+
+        def printUpperCaseAsync(self, s, context=None):
+            return _M_Demo.Printer._op_printUpperCase.invokeAsync(self, ((s, ), context))
+
+        def begin_printUpperCase(self, s, _response=None, _ex=None, _sent=None, context=None):
+            return _M_Demo.Printer._op_printUpperCase.begin(self, ((s, ), _response, _ex, _sent, context))
+
+        def end_printUpperCase(self, _r):
+            return _M_Demo.Printer._op_printUpperCase.end(self, _r)
+
+        def printReverse(self, s, context=None):
+            return _M_Demo.Printer._op_printReverse.invoke(self, ((s, ), context))
+
+        def printReverseAsync(self, s, context=None):
+            return _M_Demo.Printer._op_printReverse.invokeAsync(self, ((s, ), context))
+
+        def begin_printReverse(self, s, _response=None, _ex=None, _sent=None, context=None):
+            return _M_Demo.Printer._op_printReverse.begin(self, ((s, ), _response, _ex, _sent, context))
+
+        def end_printReverse(self, _r):
+            return _M_Demo.Printer._op_printReverse.end(self, _r)
+
         @staticmethod
         def checkedCast(proxy, facetOrContext=None, context=None):
             return _M_Demo.PrinterPrx.ice_checkedCast(proxy, '::Demo::Printer', facetOrContext, context)
@@ -71,6 +95,12 @@ if 'PrinterPrx' not in _M_Demo.__dict__:
         def printString(self, s, current=None):
             raise NotImplementedError("servant method 'printString' not implemented")
 
+        def printUpperCase(self, s, current=None):
+            raise NotImplementedError("servant method 'printUpperCase' not implemented")
+
+        def printReverse(self, s, current=None):
+            raise NotImplementedError("servant method 'printReverse' not implemented")
+
         def __str__(self):
             return IcePy.stringify(self, _M_Demo._t_PrinterDisp)
 
@@ -80,6 +110,8 @@ if 'PrinterPrx' not in _M_Demo.__dict__:
     Printer._ice_type = _M_Demo._t_PrinterDisp
 
     Printer._op_printString = IcePy.Operation('printString', Ice.OperationMode.Normal, Ice.OperationMode.Normal, False, None, (), (((), IcePy._t_string, False, 0),), (), None, ())
+    Printer._op_printUpperCase = IcePy.Operation('printUpperCase', Ice.OperationMode.Normal, Ice.OperationMode.Normal, False, None, (), (((), IcePy._t_string, False, 0),), (), None, ())
+    Printer._op_printReverse = IcePy.Operation('printReverse', Ice.OperationMode.Normal, Ice.OperationMode.Normal, False, None, (), (((), IcePy._t_string, False, 0),), (), None, ())
 
     _M_Demo.Printer = Printer
     del Printer

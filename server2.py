@@ -4,10 +4,20 @@ import Demo
 class PrinterI(Demo.Printer):
     def __init__(self, t):
         self.t = t
-        
+
     def printString(self, s, current=None):
         print(self.t, s)
         return s + "*"
+
+    def printUpperCase(self, s, current=None):
+        result = s.upper()
+        print(self.t, result)
+        return result
+
+    def printReverse(self, s, current=None):
+        result = s[::-1]
+        print(self.t, result)
+        return result
 
 communicator = Ice.initialize(sys.argv) 
 

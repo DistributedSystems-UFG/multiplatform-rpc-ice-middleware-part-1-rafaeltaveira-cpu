@@ -15,4 +15,14 @@ print(rep)
 rep = printer2.printString("Hello World from printer2!")
 print(rep)
 
+rep = printer1.printUpperCase("Hello World from printer1!")
+print(rep)
+rep = printer2.printUpperCase("Hello World from printer2!")
+print(rep)
+
+rep = printer1.printReverse("Hello World from printer1!")
+print(rep)
+rep = printer2.printReverse("Hello World from printer2!")
+print(rep)
+
 communicator.waitForShutdown()
